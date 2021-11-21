@@ -1,0 +1,34 @@
+@import '../../../assets/style/utilities.scss';
+$img-load-time: 2s;
+$content-load-time: $img-load-time + 2s;
+
+.about-content {
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  & img {
+    animation: slideIn $img-load-time cubic-bezier(0.5, 0, 0, 1);
+  }
+  & .sect-flex-details h2,
+  & .sect-flex-details p {
+    animation: slideIn $content-load-time cubic-bezier(0.5, 0, 0, 1);
+  }
+  & .sect-flex-details {
+    .btn {
+      animation: slideIn $content-load-time + 1s cubic-bezier(0.5, 0, 0, 1);
+    }
+  }
+}
+
+// Keyframes
+@keyframes slideIn {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -80, 0, 1);
+    opacity: 0;
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    opacity: 1;
+  }
+}
+
+

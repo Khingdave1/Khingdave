@@ -1,0 +1,26 @@
+<!-- Work -->
+<section class="work grid" id="work">
+  <div class="sect-heading">
+    <h2>Work</h2>
+  </div>
+  <div class="work-list">
+    <!-- Load items from script.js -->
+    <!-- <img src="../../../assets/img/work/countdown.PNG" alt="" /> -->
+    <div class="work-item" *ngFor="let i of works">
+      <div class="work-side work-front">
+        <img [src]="i.image" alt="image" class="work-item-img" />
+      </div>
+      <div class="work-side work-details">
+        <p>{{ i.name }}</p>
+        <div class="work-links">
+          <a [href]="i.live" title="Live link"
+            ><i class="bx bx-link work-icon"></i
+          ></a>
+          <a [href]="i.source" title="Source code"
+            ><i class="bx bx-code work-icon"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

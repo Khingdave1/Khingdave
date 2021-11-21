@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-portfolio-site-7f166": {
+      "hosting": {
+        "khingdave": [
+          "my-portfolio-site-7f166"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-portfolio-site-7f166"
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../../assets/style/utilities.scss';
+
+// Footer start
+.footer {
+  background-color: $secondary-color;
+  color: $white-color;
+  text-align: center;
+  padding: 40px 10%;
+  a {
+      color: $white-color;
+  }
+  &-logo  h2 {
+      font-size: 27px;
+  }
+  &-social {
+      margin: $mb-4 0;
+      .footer-icon {
+          margin: 0 $mb-2;
+          font-size: 25px;
+      }
+  }
+
+}
+// Footer ends

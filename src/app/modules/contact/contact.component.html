@@ -1,0 +1,30 @@
+<!-- Contact -->
+<section class="contact grid">
+  <div class="sect-heading">
+    <h2>Contact</h2>
+  </div>
+  <form class="contact-form" (ngSubmit)="submit()" [formGroup]="contactForm">
+    <input type="text" class="name" placeholder="Name" formControlName="name" />
+    <input
+      type="email"
+      class="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <textarea
+      name="message"
+      class="message"
+      placeholder="Message"
+      cols="30"
+      rows="5"
+      formControlName="message"
+    ></textarea>
+    <!-- Alert message -->
+    <p id="alert-msg" [hidden]="success">Message sent successfully!</p>
+    <!-- Submit Button -->
+    <button class="btn" type="button" (click)="submit()">Send</button>
+  </form>
+</section>
+
+<!-- Display data in json format -->
+<!-- {{ message | json }} -->

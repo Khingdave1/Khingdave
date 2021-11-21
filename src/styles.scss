@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import 'assets/style/utilities.scss';
+
+// Base
+*, *::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $secondary-color;
+    background-color: $white-color;
+    position: relative;
+
+}
+
+// Dark mode start
+.dark-mode {
+    background-color: $dark-sec-color;
+    color: $white-color;
+}
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+        background-color: $dark-sec-color;
+        color: $white-color;
+    }
+    .light-mode {
+        color: $secondary-color;
+        background-color: $white-color;
+    }
+}
+// Dark mode ends
+
+input,
+button,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+// General start
+
+// Section heading
+.btn {
+    display: inline-block;
+    background-color: $primary-color;
+    color: $white-color;
+    padding: .75rem 2.5rem;
+    font-weight: $font-semi;
+    border-radius: $border-radius;
+    letter-spacing: 3px;
+    transition: background-color 250ms;
+    &:hover {
+        background-color: darken($primary-color, 6);
+    }
+}
+.sect-heading h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: $mb-5;
+    &::before,
+    &::after {
+        content: "";
+        width: 50px;
+        height: 4px;
+        background: $primary-color;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+    &::before {
+        margin-right: 25px;
+    }
+    &::after {
+        margin-left: 25px;
+    }
+}
+.grid {
+    padding: 100px 10% 64px 10%;
+    @media screen and (min-width: 2000px) {
+        width: 2000px;
+        margin: 0 auto;
+    }
+}
+
+.sect-flex {
+      display: grid;
+      width: 100%;
+      grid-gap: 2rem;
+      align-items: center;
+      @media screen and (min-width: 768px) {
+          grid-template-columns: repeat(2,1fr);
+      }
+      &-img {
+          margin: 0 auto;
+          img {
+              border-radius: $border-radius;
+              @media screen and (max-width: 768px){
+                  width: 100%;
+              }
+          }
+      }
+      &-details {
+          letter-spacing: 2px;
+          p {
+              margin: $mb-2 0 $mb-3;
+          }
+      }
+  }
+// General ends
