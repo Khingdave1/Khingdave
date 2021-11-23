@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   hamClick: any;
   prefersDarkScheme: any;
   currentTheme: any;
+  isDark: any;
 
   constructor() { }
 
@@ -19,20 +20,28 @@ export class HeaderComponent implements OnInit {
 
     // Get the user's theme preference from local storage, if it's available
     this.currentTheme = localStorage.getItem("theme");
+    this.currentTheme = localStorage.getItem("is-dark");
     // If the user's preference in localStorage is dark...
     if (this.currentTheme == "dark") {
       // ...let's toggle the .dark-theme class on the body
       document.body.classList.toggle("dark-mode");
       // Otherwise, if the user's preference in localStorage is light...
+
+
     } else if (this.currentTheme == "light") {
       // ...let's toggle the .light-theme class on the body
       document.body.classList.toggle("light-mode");
+
     }
   }
 
   // Toggle Menu
   openMenu() {
     this.hamClick = !this.hamClick
+  }
+  // Close Menu
+  closeMenu() {
+    this.hamClick = false
   }
 
   toggleDarkMode() {
@@ -42,6 +51,7 @@ export class HeaderComponent implements OnInit {
       document.body.classList.toggle("light-mode");
       // ...but use .dark-mode if the .light-mode class is already on the body,
       var theme = document.body.classList.contains("light-mode") ? "light" : "dark";
+      this.isDark = !this.isDark
     } else {
       // Otherwise, let's do the same thing, but for .dark-mode
       document.body.classList.toggle("dark-mode");
@@ -49,6 +59,7 @@ export class HeaderComponent implements OnInit {
     }
     // Finally, let's save the current preference to localStorage to keep using it
     localStorage.setItem("theme", theme);
+    localStorage.setItem("is-dark", this.isDark);
 
   }
 

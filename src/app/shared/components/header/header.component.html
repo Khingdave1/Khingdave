@@ -16,7 +16,7 @@
     </div>
     <!-- Nav link -->
     <ul class="nav-list" [class.open-menu]="hamClick">
-      <li>
+      <li (click)="closeMenu()">
         <a
           routerLink=""
           routerLinkActive="active-link"
@@ -25,28 +25,29 @@
           >Home</a
         >
       </li>
-      <li>
+      <li (click)="closeMenu()">
         <a routerLink="about" routerLinkActive="active-link" class="nav-link"
           >About</a
         >
       </li>
-      <li>
+      <li (click)="closeMenu()">
         <a routerLink="skills" routerLinkActive="active-link" class="nav-link"
           >Skills</a
         >
       </li>
-      <li>
+      <li (click)="closeMenu()">
         <a routerLink="work" routerLinkActive="active-link" class="nav-link"
           >Work</a
         >
       </li>
-      <li>
+      <li (click)="closeMenu()">
         <a routerLink="contact" routerLinkActive="active-link" class="nav-link"
           >Contact</a
         >
       </li>
       <li class="dark-mode-btn" (click)="toggleDarkMode()">
-        <i class="bx bx-moon"></i>
+        <i class="bx bx-moon" *ngIf="isDark"></i>
+        <i class="bx bx-sun" *ngIf="!isDark"></i>
       </li>
     </ul>
   </nav>
