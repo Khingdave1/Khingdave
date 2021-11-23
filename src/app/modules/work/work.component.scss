@@ -46,6 +46,17 @@
                   font-size: 18px;
                   color: $white-color;
               }
+              .work-technologies {
+                small {
+                  padding: 0.2rem 0.5rem;
+                  color: $primary-color;
+                  background-color: $white-color;
+                  border-radius: $border-radius + 1rem;
+                  &:not(:last-child) {
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
               .work-links {
                   display: flex;
                   justify-content: space-between;

@@ -12,11 +12,16 @@
       </div>
       <div class="work-side work-details">
         <p>{{ i.name }}</p>
+        <div class="work-technologies">
+          <small *ngFor="let child of i.technologies">
+            {{ child.name | lowercase }}
+          </small>
+        </div>
         <div class="work-links">
-          <a [href]="i.live" title="Live link"
+          <a [href]="i.live" title="Live link" target="_blank"
             ><i class="bx bx-link work-icon"></i
           ></a>
-          <a [href]="i.source" title="Source code"
+          <a [href]="i.source" title="Source code" target="_blank"
             ><i class="bx bx-code work-icon"></i
           ></a>
         </div>
