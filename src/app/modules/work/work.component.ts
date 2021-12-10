@@ -43,6 +43,18 @@ export class WorkComponent implements OnInit {
     },
 
     {
+      name: "PerlFood Dashboard",
+      image: " ../../../assets/img/work/perlfood_dashboard.PNG",
+      live: "https://affectionate-davinci-2d38e2.netlify.app",
+      source: "https://github.com/Khingdave1/PerlFood-Dashboard",
+      technologies: [
+        { name: "angular" },
+        { name: "scss" },
+        { name: "firebase" },
+      ]
+    },
+
+    {
       name: "DevFest Mpape",
       image: " ../../../assets/img/work/devfest.PNG",
       live: "https://gdgmpape.com",

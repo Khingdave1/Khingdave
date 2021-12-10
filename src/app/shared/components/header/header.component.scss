@@ -132,3 +132,39 @@
 }
 // .open will be added when you click on the toggle menu
 // Header ends
+
+
+// Theme Switcher //
+// .theme-switcher-wrap {
+//   width: 100%;
+//   text-align: right;
+//   .theme-switcher {
+//     display: inline-block;
+//     cursor: pointer;
+//     .switch-path {
+//       width: 40px;
+//       height: 20px;
+//       border-radius: 10px;
+//       background-color: #ccc;
+//       .switch-handle {
+//         background-color: #999;
+//         width: 20px;
+//         height: 20px;
+//         border-radius: 50%;
+//         transition: all 0.3s ease-in-out;
+//       }
+//     }
+//     .theme-switcher {
+//       display: none;
+//     }
+//     &.active {
+//       .switch-path {
+//         background-color: #555;
+//       }
+//       .switch-handle {
+//         transform: translateX(20px);
+//         background-color: #7bbb5e ;
+//       }
+//     }
+//   }
+// }
