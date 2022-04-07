@@ -1,8 +1,14 @@
 @import '../../../assets/style/utilities.scss';
+
 $img-load-time: 2s;
 $content-load-time: $img-load-time + 2s;
 
 .about-content {
+  .about-img {
+    width: 269px;
+    height: 409px;
+    border: 2px solid $white-color;
+  }
   opacity: 1;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   & img {
