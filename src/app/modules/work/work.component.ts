@@ -7,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkComponent implements OnInit {
   works = [
+     {
+      name: "Dumena LMS",
+      image: " ../../../assets/img/work/dumena-2.PNG",
+      live: "https://royalrideexpress.netlify.app",
+      source: "",
+      technologies: [
+        { name: "Angular" },
+        { name: "scss" },
+      ]
+    },
     {
       name: "Royal Ride",
       image: " ../../../assets/img/work/royalride.PNG",
-      live: "https://royalrideexpress.com/",
+      live: "https://royalrideexpress.netlify.app",
       source: "https://github.com/Khingdave1/Royal-Value-Logistics",
       technologies: [
         { name: "html" },
@@ -57,7 +67,7 @@ export class WorkComponent implements OnInit {
     {
       name: "DevFest Mpape",
       image: " ../../../assets/img/work/devfest.PNG",
-      live: "https://gdgmpape.com",
+      live: "https://devfestmpape.netlify.app",
       source: "https://github.com/Khingdave1/Perlfoodapp",
       technologies: [
         { name: "angular" }
