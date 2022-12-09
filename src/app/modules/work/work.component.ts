@@ -9,7 +9,7 @@ export class WorkComponent implements OnInit {
   works = [
      {
       name: "Dumena LMS",
-      image: " ../../../assets/img/work/dumena-2.PNG",
+      image: " ../../../assets/img/work/dumena-2.png",
       live: "https://royalrideexpress.netlify.app",
       source: "",
       technologies: [
